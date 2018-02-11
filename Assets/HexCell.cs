@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 public static class HexMetrics {
     public const float outerRadius = 10f;
     public const float innerRadius = outerRadius * .866025404f;
@@ -20,6 +19,10 @@ public static class HexMetrics {
 
 
 public class HexCell : MonoBehaviour {
+
+    public HexCoordinates coordinates;
+
+    public Color color;
 
     private void Awake()
     {
