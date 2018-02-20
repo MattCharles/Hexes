@@ -79,6 +79,17 @@ public class HexGrid : MonoBehaviour {
         //Debug.Log("touched at " + position);
     }
 
+    public void ColorCell(Vector3 position, Color color)
+    {
+        position = transform.InverseTransformPoint(position);
+        HexCoordinates coordinates = HexCoordinates.FromPosition(position);
+        int index = coordinates.X + coordinates.Z * width + coordinates.Z / 2;
+        HexCell cell = cells[index];
+        cell.color = color;
+        hexMesh.Triangulate(cells);
+        //Debug.Log("touched at " + position);
+    }
+
     void CreateCell(int x, int z, int i) {
         Vector3 position;
         //position.x = x * defaultPlaneSize;
