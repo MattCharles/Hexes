@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player {
-    public const int maxDeck = 100;
+    public const int maxDeck = 20;
     public const int maxHand = 10;
 
     public readonly int index;
