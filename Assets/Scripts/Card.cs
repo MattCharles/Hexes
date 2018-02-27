@@ -8,6 +8,7 @@ public class Card {
     public int money;
     public int magic;
     public string text;
+    public int orderOfPlay = int.MaxValue;
 
     public string Name { get; set; }
     public int OwnerIndex { get; set; }
