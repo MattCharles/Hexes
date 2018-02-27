@@ -10,6 +10,4 @@ public class Card {
 
     public string Name { get; set; }
     public int OwnerIndex { get; set; }
-
-    public List<Unit> occupants = new List<Unit>();
 }
