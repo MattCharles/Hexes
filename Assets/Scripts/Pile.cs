@@ -12,7 +12,7 @@ public class Pile<T> : List<T> {
         {
             int r = Random.Range(0, i);
             T temp = list[i];
-            list[i] = list[i];
+            list[i] = list[r];
             list[r] = temp;
         }
     }
