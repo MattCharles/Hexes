@@ -54,4 +54,10 @@ public class Match {
             players.Add(new Player(i));
         }
     }
+
+    public void Start()
+    {
+        //5 cards for both, action phase, unit phase
+
+    }
 }

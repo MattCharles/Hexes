@@ -6,13 +6,15 @@ public class Tile {
 
     public int Value { get; set; }
     public string Name { get; set; }
-    public Resource resource;
+    public List<Tile> Neighbors { get; set; }
+    public Vector3 Position { get; set; }
+    public Resource Resource { get; private set; }
 
-    public List<Unit> occupants = new List<Unit>();
+    public Corps[] occupants;
 
-    public Player FindWinner()
+    public Player FindWinner(int numPlayers)
     {
-        switch (resource)
+        switch (Resource)
         {
             case Resource.Might:
 
@@ -39,5 +41,19 @@ public class Tile {
                 break;
         }
         return null;
+    }
+
+    public void Initialize(int numPlayers)
+    {
+        occupants = new Corps[numPlayers];
+        for(int i = 0; i<numPlayers; i++)
+        {
+            occupants[i] = new Corps();
+        }
+    }
+
+    public void AddUnit(int player, Unit unit)
+    {
+        occupants[player].Add(unit);
     }
 }
