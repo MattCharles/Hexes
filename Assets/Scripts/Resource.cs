@@ -6,8 +6,8 @@ public enum Resource : byte {
 	Might,
     Money,
     Magic,
-    xMight,
-    xMoney,
-    xMagic,
+    notMight,
+    notMoney,
+    notMagic,
     All
 }

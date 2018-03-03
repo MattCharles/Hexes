@@ -25,13 +25,13 @@ public class Tile {
             case Resource.Magic:
 
                 break;
-            case Resource.xMight:
+            case Resource.notMight:
 
                 break;
-            case Resource.xMoney:
+            case Resource.notMoney:
 
                 break;
-            case Resource.xMagic:
+            case Resource.notMagic:
 
                 break;
             case Resource.All:
