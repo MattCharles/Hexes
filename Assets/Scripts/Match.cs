@@ -58,6 +58,9 @@ public class Match {
     public void Start()
     {
         //5 cards for both, action phase, unit phase
-
+        foreach(Player player in players)
+        {
+            player.StartDraw();
+        }
     }
 }

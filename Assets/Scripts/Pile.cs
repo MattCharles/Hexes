@@ -16,4 +16,11 @@ public class Pile<T> : List<T> {
             list[r] = temp;
         }
     }
+
+    public T Pop()
+    {
+        T item = list[0];
+        list.RemoveAt(0);
+        return item;
+    }
 }
