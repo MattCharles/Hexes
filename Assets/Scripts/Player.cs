@@ -29,9 +29,14 @@ public class Player {
 
     public void Draw(int numCards)
     {
-        while (deck.Count > 0)
+        while (deck.Count > 0 && numCards > 0)
         {
             hand.Add(deck.Pop());
+            numCards--;
+            if (deck.Count == 0 && numCards > 0)
+            {
+                deck = discard.ShuffleAndClear();
+            }
         }
     }
 }
