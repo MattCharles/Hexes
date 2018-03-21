@@ -39,4 +39,20 @@ public class Player {
             }
         }
     }
+
+    public void Buy(Card card)
+    {
+        if (Influence > card.cost)
+        {
+            discard.Add(card);
+            Influence -= card.cost;
+            //TODO: Make the shop piles, remove the card from there.
+                //If the cards are out then so be it they're out RIP
+        }
+        else
+        {
+            //TODO: Some sort of exception probably
+        }
+
+    }
 }
