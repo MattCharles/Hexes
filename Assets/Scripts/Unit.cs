@@ -22,4 +22,12 @@ public class Unit : Card {
                 throw new System.ArgumentException("Invalid resource selection");
         }
     }
+
+    public override void Load(Dictionary<string, object> data)
+    {
+        base.Load(data);
+        might = System.Convert.ToInt32(data["might"]);
+        money = System.Convert.ToInt32(data["money"]);
+        magic = System.Convert.ToInt32(data["magic"]);
+    }
 }
