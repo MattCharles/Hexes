@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum Resource : byte {
-	Might,
+    Might,
     Money,
     Magic,
     notMight,
