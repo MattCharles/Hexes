@@ -58,6 +58,7 @@ public class Match {
         TileCount = 6;
     }
 
+    //TODO: Maybe change up for eaches on players so we can change starting index
     public void Start()
     {
         //while nobody has won yet?
@@ -65,6 +66,11 @@ public class Match {
         foreach (Player player in players)
         {
             player.StartDraw();
+        }
+
+        foreach (Tile tile in tiles)
+        {
+            //initialize tiles so they have resources and influence values and stuff
         }
 
         foreach(Player player in players)
@@ -90,6 +96,16 @@ public class Match {
                 }
             }
         }
-        
+
+        foreach (Tile tile in tiles)
+        {
+            tile.FindWinner().Influence+=tile.Influence;
+            //TODO: check for a winner? Or else the quest thing idk
+        }
+
+        foreach (Player player in players)
+        {
+            player.BuyPhase();
+        }
     }
 }

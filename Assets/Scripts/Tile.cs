@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Tile { 
 
-    public int Value { get; set; }
+    public int Influence { get; set; }
     public string Name { get; set; }
     public List<Tile> Neighbors { get; set; }
     public Vector3 Position { get; set; }
-    public Resource Resource { get; private set; }
+    public Resource Resource { get; }
 
     public Corps[] occupants;
 
-    public Player FindWinner(int numPlayers)
+    public Player FindWinner()
     {
         switch (Resource)
         {

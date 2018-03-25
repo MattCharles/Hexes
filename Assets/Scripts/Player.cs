@@ -66,4 +66,9 @@ public class Player {
         //TODO: Return true if the player took a turn. False if they could not or chose not to.
         return true;
     }
+
+    public void BuyPhase()
+    {
+
+    }
 }
