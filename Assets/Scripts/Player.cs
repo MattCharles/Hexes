@@ -69,6 +69,21 @@ public class Player {
 
     public void BuyPhase()
     {
+        //TODO: Allow a player to buy cards for which they have enough influence.
+    }
 
+    public void Deploy(Unit unit, Tile tile)
+    {
+        //TODO: ensure the hand has that unit?
+        hand.Remove(unit);
+        tile.AddUnit(index, unit);
+    }
+
+    public void Move(Unit unit, Tile source, Tile destination)
+    {
+        //TODO: Ensure source and destination are neighbors?
+        unit.Reveal();
+        source.Remove(index, unit);
+        destination.AddUnit(index, unit);
     }
 }

@@ -51,6 +51,11 @@ public class Tile {
         occupants[player].Add(unit);
     }
 
+    public void Remove(int player, Unit unit)
+    {
+        occupants[player].Remove(unit);
+    }
+
     public virtual void Load(Dictionary<string, object> data)
     {
         id = (string)data["id"];

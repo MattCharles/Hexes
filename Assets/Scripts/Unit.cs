@@ -31,4 +31,17 @@ public class Unit : Card {
         money = System.Convert.ToInt32(data["money"]);
         magic = System.Convert.ToInt32(data["magic"]);
     }
+
+    public void Announce()
+    {
+        Reveal();
+        //Activate Announce Effects
+        //TODO: other stuff?
+    }
+
+    public void Reveal()
+    {
+        hidden = false;
+        //TODO: other stuff?
+    }
 }

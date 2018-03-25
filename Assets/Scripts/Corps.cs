@@ -7,7 +7,12 @@ public class Corps : List<Unit> {
     public Player owner;
     private int numCommoners = 0;
     public bool ContainsCommoner
-    { get { return numCommoners > 0; } }
+    {
+        get
+        {
+            return numCommoners > 0;
+        }
+    }
 
     public int getTotal(Resource resource)
     {
