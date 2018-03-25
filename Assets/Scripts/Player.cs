@@ -76,14 +76,14 @@ public class Player {
     {
         //TODO: ensure the hand has that unit?
         hand.Remove(unit);
-        tile.AddUnit(index, unit);
+        tile.AddUnit(unit);
     }
 
     public void Move(Unit unit, Tile source, Tile destination)
     {
         //TODO: Ensure source and destination are neighbors?
         unit.Reveal();
-        source.Remove(index, unit);
-        destination.AddUnit(index, unit);
+        source.Remove(unit);
+        destination.AddUnit(unit);
     }
 }

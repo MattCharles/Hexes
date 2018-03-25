@@ -11,15 +11,15 @@ public class Tile {
     public Resource Resource { get; }
     public string id;
     public string text;
-
-    public Corps[] occupants;
+    
+    public Dictionary<Player, Corps> occupants;
 
     public List<Player> FindWinners()
     {
         //You can only win a tile you have at least one power over
         int currentMax = 1;
         List<Player> winners = null;
-        foreach(Corps corps in occupants)
+        foreach(Corps corps in occupants.Values)
         {
             if (corps.getTotal(Resource) > currentMax)
             {
@@ -36,24 +36,15 @@ public class Tile {
         return winners;
     }
 
-    public void Initialize(int numPlayers)
+    public void AddUnit(Unit unit)
     {
-        occupants = new Corps[numPlayers];
-        for(int i = 0; i<numPlayers; i++)
-        {
-            occupants[i] = new Corps();
-        }
-        //TODO: Load method like in Unit
+        occupants[unit.owner].Add(unit);
     }
 
-    public void AddUnit(int player, Unit unit)
+    public void Remove(Unit unit)
     {
-        occupants[player].Add(unit);
-    }
-
-    public void Remove(int player, Unit unit)
-    {
-        occupants[player].Remove(unit);
+        occupants[unit.owner].Remove(unit);
+        unit.AddToDiscard();
     }
 
     public virtual void Load(Dictionary<string, object> data)

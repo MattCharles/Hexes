@@ -3,22 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Unit : Card {
-    public int might;
-    public int money;
-    public int magic;
     public bool hidden;
     public string flavor;
+    public int baseMight;
+    public int baseMoney;
+    public int baseMagic;
+    public int bonusMight = 0;
+    public int bonusMoney = 0;
+    public int bonusMagic = 0;
+    public int Might
+    {
+        get
+        {
+            return baseMight + bonusMight;
+        }
+    }
+    public int Money
+    {
+        get
+        {
+            return baseMoney + bonusMoney;
+        }
+    }
+    public int Magic
+    {
+        get
+        {
+            return baseMagic + bonusMagic;
+        }
+    }
 
     public int getValue(Resource resource)
     {
         switch (resource)
         {
             case Resource.Might:
-                return might;
+                return Might;
             case Resource.Money:
-                return money;
+                return Money;
             case Resource.Magic:
-                return magic;
+                return Magic;
             default:
                 throw new System.ArgumentException("Invalid resource selection");
         }
@@ -27,9 +51,9 @@ public class Unit : Card {
     public override void Load(Dictionary<string, object> data)
     {
         base.Load(data);
-        might = System.Convert.ToInt32(data["might"]);
-        money = System.Convert.ToInt32(data["money"]);
-        magic = System.Convert.ToInt32(data["magic"]);
+        baseMight = System.Convert.ToInt32(data["might"]);
+        baseMoney = System.Convert.ToInt32(data["money"]);
+        baseMagic = System.Convert.ToInt32(data["magic"]);
     }
 
     public void Announce()
@@ -42,6 +66,11 @@ public class Unit : Card {
     public void Reveal()
     {
         hidden = false;
-        //TODO: other stuff?
+        //TODO: other stuff? Def some UI stuff but anything else?
+    }
+
+    public void AddToDiscard()
+    {
+        owner.discard.Add(this);
     }
 }

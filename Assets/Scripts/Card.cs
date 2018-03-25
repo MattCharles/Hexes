@@ -10,7 +10,7 @@ public class Card {
     public string id;
 
     public string Name { get; set; }
-    public int OwnerIndex { get; set; }
+    public Player owner;
 
     public virtual void Load (Dictionary<string, object> data)
     {

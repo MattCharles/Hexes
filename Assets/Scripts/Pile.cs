@@ -20,9 +20,9 @@ public class Pile<T> : List<T> {
     //Shuffle a pile and then clear it out. Used to transfer discard to deck.
     public Pile<T> ShuffleAndClear()
     {
-        Pile<T> pile = this.Shuffle();
+        Pile<T> temp = this.Shuffle();
         this.Clear();
-        return pile;
+        return temp;
     }
 
     public T Pop()

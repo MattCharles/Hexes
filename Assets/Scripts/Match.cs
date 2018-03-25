@@ -5,7 +5,9 @@ using UnityEngine;
 public class Match {
     public int currentPlayerIndex;
     public List<Player> players;
-    public Pile<Tile> tiles;
+    public Pile<Tile> tileDeck;
+    public Pile<Tile> tileDiscard;
+    public List<Tile> tileField;
 
     public Player CurrentPlayer
     {
@@ -33,20 +35,6 @@ public class Match {
         }
     }
 
-    public List<Tile> Tiles
-    {
-        get
-        {
-            if(tiles == null)
-            {
-                return null;
-            } else
-            {
-                return tiles;
-            }
-        }
-    }
-
     public Match(int playerCount)
     {
         for(int i = 0; i<playerCount; ++i)
@@ -68,10 +56,20 @@ public class Match {
             player.StartDraw();
         }
 
-        foreach (Tile tile in tiles)
+        tileDeck.Shuffle();
+        for (int i = 0; i < TileCount; i++)
         {
             //initialize tiles so they have resources and influence values and stuff
-            tile.Initialize(PlayerCount);
+            //tile.Initialize(PlayerCount);
+            if (tileDeck.Peek()!=null)
+            {
+                tileField.Add(tileDeck.Pop());
+            }
+            else
+            {
+                tileDeck = tileDiscard.ShuffleAndClear();
+                tileField.Add(tileDeck.Pop());
+            }
         }
 
         foreach(Player player in players)
@@ -98,13 +96,15 @@ public class Match {
             }
         }
 
-        foreach (Tile tile in tiles)
+        foreach (Tile tile in tileField)
         {
             foreach(Player winner in tile.FindWinners())
             {
                 winner.Influence += tile.Influence;
             }
             //TODO: check for a winner? Or else the quest thing idk
+            tileField.Remove(tile);
+            tileDiscard.Add(tile);
         }
 
         foreach (Player player in players)
