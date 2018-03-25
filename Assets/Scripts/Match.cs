@@ -71,6 +71,7 @@ public class Match {
         foreach (Tile tile in tiles)
         {
             //initialize tiles so they have resources and influence values and stuff
+            tile.Initialize(PlayerCount);
         }
 
         foreach(Player player in players)

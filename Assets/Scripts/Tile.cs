@@ -9,6 +9,8 @@ public class Tile {
     public List<Tile> Neighbors { get; set; }
     public Vector3 Position { get; set; }
     public Resource Resource { get; }
+    public string id;
+    public string text;
 
     public Corps[] occupants;
 
@@ -41,10 +43,19 @@ public class Tile {
         {
             occupants[i] = new Corps();
         }
+        //TODO: Load method like in Unit
     }
 
     public void AddUnit(int player, Unit unit)
     {
         occupants[player].Add(unit);
+    }
+
+    public virtual void Load(Dictionary<string, object> data)
+    {
+        id = (string)data["id"];
+        Name = (string)data["name"];
+        text = (string)data["text"];
+        Influence = System.Convert.ToInt32(data["influence"]);
     }
 }

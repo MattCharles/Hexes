@@ -7,6 +7,7 @@ public class Unit : Card {
     public int money;
     public int magic;
     public bool hidden;
+    public string flavor;
 
     public int getValue(Resource resource)
     {
