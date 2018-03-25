@@ -99,7 +99,10 @@ public class Match {
 
         foreach (Tile tile in tiles)
         {
-            tile.FindWinner().Influence+=tile.Influence;
+            foreach(Player winner in tile.FindWinners())
+            {
+                winner.Influence += tile.Influence;
+            }
             //TODO: check for a winner? Or else the quest thing idk
         }
 

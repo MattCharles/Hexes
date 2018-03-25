@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Corps : List<Unit> {
-    
+
+    public Player owner;
+
     public int getTotal(Resource resource)
     {
         int total = 0;

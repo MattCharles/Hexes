@@ -12,35 +12,26 @@ public class Tile {
 
     public Corps[] occupants;
 
-    public Player FindWinner()
+    public List<Player> FindWinners()
     {
-        switch (Resource)
+        //You can only win a tile you have at least one power over
+        int currentMax = 1;
+        List<Player> winners = null;
+        foreach(Corps corps in occupants)
         {
-            case Resource.Might:
-
-                break;
-            case Resource.Money:
-
-                break;
-            case Resource.Magic:
-
-                break;
-            case Resource.notMight:
-
-                break;
-            case Resource.notMoney:
-
-                break;
-            case Resource.notMagic:
-
-                break;
-            case Resource.All:
-
-                break;
-            default:
-                break;
+            if (corps.getTotal(Resource) > currentMax)
+            {
+                winners.Clear();
+                winners.Add(corps.owner);
+                currentMax = corps.getTotal(Resource);
+            }
+            //TODO: handle ties - for now, both win in a tie
+            else if(corps.getTotal(Resource) == currentMax)
+            {
+                winners.Add(corps.owner);
+            }
         }
-        return null;
+        return winners;
     }
 
     public void Initialize(int numPlayers)
