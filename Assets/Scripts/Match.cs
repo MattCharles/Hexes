@@ -53,14 +53,43 @@ public class Match {
         {
             players.Add(new Player(i));
         }
+        PlayerCount = playerCount;
+        //TODO: Adjust tiles by player, perhaps an array
+        TileCount = 6;
     }
 
     public void Start()
     {
+        //while nobody has won yet?
         //5 cards for both, action phase, unit phase
-        foreach(Player player in players)
+        foreach (Player player in players)
         {
             player.StartDraw();
         }
+
+        foreach(Player player in players)
+        {
+            player.ActionPhase();
+        }
+
+        bool[] stillPlaying = new bool[PlayerCount];
+        int numPlaying = PlayerCount;
+        List<Player> playing = players;
+        for (int i = 0; i < PlayerCount; i++)
+        {
+            stillPlaying[i] = true;
+        }
+        //while any player can take a turn
+        while (playing.Count > 0)
+        {
+            //loop through valid players and let them take a turn
+            foreach(Player player in playing){
+                if (!player.UnitPhase())
+                {
+                    playing.Remove(player);
+                }
+            }
+        }
+        
     }
 }

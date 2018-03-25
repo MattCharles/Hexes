@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Pile<T> : List<T> {
-    private List<T> list = new List<T>();
 
     //Fisher-Yates Shuffle.
     public Pile<T> Shuffle()
     {
-        for (int i = list.Count - 1; i > 0; i--)
+        for (int i = this.Count - 1; i > 0; i--)
         {
             int r = Random.Range(0, i);
-            T temp = list[i];
-            list[i] = list[r];
-            list[r] = temp;
+            T temp = this[i];
+            this[i] = this[r];
+            this[r] = temp;
         }
-        return (Pile<T>) list;
+        return this;
     }
 
     //Shuffle a pile and then clear it out. Used to transfer discard to deck.
@@ -28,8 +27,13 @@ public class Pile<T> : List<T> {
 
     public T Pop()
     {
-        T item = list[0];
-        list.RemoveAt(0);
+        T item = this[0];
+        this.RemoveAt(0);
         return item;
+    }
+
+    public T Peek()
+    {
+        return this[0];
     }
 }

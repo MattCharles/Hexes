@@ -55,4 +55,15 @@ public class Player {
         }
 
     }
+
+    public void ActionPhase()
+    {
+        //TODO: allow player to play actions. Doesn't need granularity since all actions are played at once
+    }
+
+    public bool UnitPhase()
+    {
+        //TODO: Return true if the player took a turn. False if they could not or chose not to.
+        return true;
+    }
 }
