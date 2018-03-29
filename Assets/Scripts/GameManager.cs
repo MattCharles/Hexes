@@ -6,6 +6,7 @@ using System.Text;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; set; }
     private const float TILE_OFFSET = 0.5f;
 
     private int selectionX = -1;
@@ -41,7 +42,17 @@ public class GameManager : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 25.0f, LayerMask.GetMask(masks)))
         {
-            Debug.Log(hit.point);
+            selectionX = (int)hit.point.x;
+            selectionY = (int)hit.point.y;
+        } else
+        {
+            selectionX = -1;
+            selectionY = -1;
         }
+    }
+
+    public void DrawTiles()
+    {
+        //TODO: do hexmesh stuff?
     }
 }
