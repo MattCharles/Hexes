@@ -80,7 +80,7 @@ def main():
             print("Name, Influence, Methods")
             # Print columns A and E, which correspond to indices 0 and 4.
             print('%s, %s, %s' % (row[0], row[1], row[2]))
-            tileList.write("\n        \"id\": \"Tile%s\"," % id)
+            tileList.write("        \"id\": \"Tile%s\"," % id)
             id = id+1
             tileList.write("\n        \"name\": \"%s\"," % row[0])
             tileList.write("\n        \"influence\": \"%s\"," % row[1])
