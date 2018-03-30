@@ -1,0 +1,180 @@
+{
+    "tiles": [{ 
+        "id": "Tile0",
+        "name": "Wasteland",
+        "influence": "0",
+        "domain": "Any"
+    },
+    {
+
+        "id": "Tile1",
+        "name": "Royal Wedding",
+        "influence": "1",
+        "domain": "Any"
+    },
+    {
+
+        "id": "Tile2",
+        "name": "Fortress",
+        "influence": "3",
+        "domain": "Any"
+    },
+    {
+
+        "id": "Tile3",
+        "name": "Garden",
+        "influence": "1",
+        "domain": "Magic"
+    },
+    {
+
+        "id": "Tile4",
+        "name": "Meadow",
+        "influence": "2",
+        "domain": "Magic"
+    },
+    {
+
+        "id": "Tile5",
+        "name": "Mountain",
+        "influence": "3",
+        "domain": "Magic"
+    },
+    {
+
+        "id": "Tile6",
+        "name": "Valley",
+        "influence": "1",
+        "domain": "Magic OR Might"
+    },
+    {
+
+        "id": "Tile7",
+        "name": "Tower",
+        "influence": "2",
+        "domain": "Magic OR Might"
+    },
+    {
+
+        "id": "Tile8",
+        "name": "Throne Room?",
+        "influence": "3",
+        "domain": "Magic OR Might"
+    },
+    {
+
+        "id": "Tile9",
+        "name": "Shrine",
+        "influence": "1",
+        "domain": "Magic OR Money"
+    },
+    {
+
+        "id": "Tile10",
+        "name": "Temple",
+        "influence": "2",
+        "domain": "Magic OR Money"
+    },
+    {
+
+        "id": "Tile11",
+        "name": "Cathedral",
+        "influence": "3",
+        "domain": "Magic OR Money"
+    },
+    {
+
+        "id": "Tile12",
+        "name": "Haunted Mineshaft",
+        "influence": "2",
+        "domain": "Magic OR Money"
+    },
+    {
+
+        "id": "Tile13",
+        "name": "Arena",
+        "influence": "1",
+        "domain": "Might"
+    },
+    {
+
+        "id": "Tile14",
+        "name": "Battleground",
+        "influence": "2",
+        "domain": "Might"
+    },
+    {
+
+        "id": "Tile15",
+        "name": "War Zone",
+        "influence": "3",
+        "domain": "Might"
+    },
+    {
+
+        "id": "Tile16",
+        "name": "Guard Post",
+        "influence": "1",
+        "domain": "Might OR Money"
+    },
+    {
+
+        "id": "Tile17",
+        "name": "Mercenary Camp",
+        "influence": "2",
+        "domain": "Might OR Money"
+    },
+    {
+
+        "id": "Tile18",
+        "name": "City State",
+        "influence": "3",
+        "domain": "Might OR Money"
+    },
+    {
+
+        "id": "Tile19",
+        "name": "Shop",
+        "influence": "1",
+        "domain": "Money"
+    },
+    {
+
+        "id": "Tile20",
+        "name": "Bazaar",
+        "influence": "2",
+        "domain": "Money"
+    },
+    {
+
+        "id": "Tile21",
+        "name": "Market",
+        "influence": "3",
+        "domain": "Money"
+    },
+    {
+
+        "id": "Tile22",
+        "name": "Hovel",
+        "influence": "1",
+        "domain": "Magic OR Might"
+    },
+    {
+
+        "id": "Tile23",
+        "name": "Graveyard",
+        "influence": "1",
+        "domain": "Magic OR Might"
+    },
+    {
+
+        "id": "Tile24",
+        "name": "Greenhouse",
+        "influence": "1",
+        "domain": "Magic"
+    },
+    {
+
+    }
+  ]
+}
