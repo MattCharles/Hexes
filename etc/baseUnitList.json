@@ -1,0 +1,266 @@
+{
+    "units": [{ 
+        "id": "Unit0",
+        "name": "Militiaman",
+        "type": "Unit",
+        "cost": "0"
+        "might": "2"
+        "money": "1"
+        "magic": "1"
+        "effect": "Start with 3 of these in your deck."
+    },
+    {
+        "id": "Unit1",
+        "name": "Peasant",
+        "type": "Commoner",
+        "cost": "0"
+        "might": "0"
+        "money": "0"
+        "magic": "0"
+        "effect": "No matter where this card ends up during Cleanup, return it to your hand for your next draw phase."
+    },
+    {
+        "id": "Unit2",
+        "name": "Scribe",
+        "type": "Unit",
+        "cost": "0"
+        "might": "1"
+        "money": "1"
+        "magic": "2"
+        "effect": "Start with 3 of these in your deck."
+    },
+    {
+        "id": "Unit3",
+        "name": "Shopkeeper",
+        "type": "Unit",
+        "cost": "0"
+        "might": "1"
+        "money": "2"
+        "magic": "1"
+        "effect": "Start with 3 of these in your deck."
+    },
+    {
+        "id": "Unit4",
+        "name": "Raider",
+        "type": "Unit",
+        "cost": "1"
+        "might": "2"
+        "money": "1"
+        "magic": "0"
+        "effect": "Gain an influence if there is an enemy Commoner on this tile."
+    },
+    {
+        "id": "Unit5",
+        "name": "Squire",
+        "type": "Unit",
+        "cost": "1"
+        "might": "1"
+        "money": "0"
+        "magic": "0"
+        "effect": "Give a friendly unit on this tile (not this unit) +1/0/0.  If this unit helps win a tile, Trash it and gain a copy of a friendly unit on this tile."
+    },
+    {
+        "id": "Unit6",
+        "name": "Supply Line",
+        "type": "Commoner",
+        "cost": "1"
+        "might": "0"
+        "money": "1"
+        "magic": "0"
+        "effect": "Adjacent tiles get +1/+1/0.  This tile is worth +1 Influence."
+    },
+    {
+        "id": "Unit7",
+        "name": "Trapeze Artist",
+        "type": "Unit",
+        "cost": "1"
+        "might": "0"
+        "money": "2"
+        "magic": "1"
+        "effect": "Your units ignore traps on this tile."
+    },
+    {
+        "id": "Unit8",
+        "name": "Drill Sergeant",
+        "type": "Unit",
+        "cost": "2"
+        "might": "3"
+        "money": "1"
+        "magic": "1"
+        "effect": "Your Militiamen on this tile have +1 Might"
+    },
+    {
+        "id": "Unit9",
+        "name": "Juggler",
+        "type": "Unit",
+        "cost": "2"
+        "might": "1"
+        "money": "2"
+        "magic": "2"
+        "effect": "Replace this tile."
+    },
+    {
+        "id": "Unit10",
+        "name": "Parade",
+        "type": "Commoner",
+        "cost": "2"
+        "might": "0"
+        "money": "2"
+        "magic": "0"
+        "effect": "Gain an Influence per Parade on this tile if there are no enemy non-commoner units on this tile."
+    },
+    {
+        "id": "Unit11",
+        "name": "Professor",
+        "type": "Unit",
+        "cost": "2"
+        "might": "0"
+        "money": "1"
+        "magic": "3"
+        "effect": "Announce: Trash a Scribe and gain a Unit costing up to 4."
+    },
+    {
+        "id": "Unit12",
+        "name": "Scout",
+        "type": "Commoner",
+        "cost": "2"
+        "might": "0"
+        "money": "0"
+        "magic": "0"
+        "effect": "Peasant Replacement. Announce: Reveal all units on this tile."
+    },
+    {
+        "id": "Unit13",
+        "name": "Thief",
+        "type": "Unit",
+        "cost": "2"
+        "might": "0"
+        "money": "2"
+        "magic": "0"
+        "effect": "If this is the only non-Commoner unit on this tile, gain 1 Influence."
+    },
+    {
+        "id": "Unit14",
+        "name": "Bullfighter",
+        "type": "Unit",
+        "cost": "3"
+        "might": "1"
+        "money": "1"
+        "magic": "0"
+        "effect": "If you win this tile, gain +1 Influence for each unit on it."
+    },
+    {
+        "id": "Unit15",
+        "name": "City Planner",
+        "type": "Unit",
+        "cost": "3"
+        "might": "1"
+        "money": "3"
+        "magic": "1"
+        "effect": "Next turn, draw one extra tile, no matter how many other city planners there are in play this turn."
+    },
+    {
+        "id": "Unit16",
+        "name": "Force Mage",
+        "type": "Unit",
+        "cost": "3"
+        "might": "0"
+        "money": "0"
+        "magic": "1"
+        "effect": "Announce: Move a unit from this tile to another tile."
+    },
+    {
+        "id": "Unit17",
+        "name": "Mansa",
+        "type": "Unit",
+        "cost": "3"
+        "might": "0"
+        "money": "2"
+        "magic": "2"
+        "effect": "Mounted.  Adjacent tiles get +0/1/0"
+    },
+    {
+        "id": "Unit18",
+        "name": "Mirror Mage",
+        "type": "Unit",
+        "cost": "3"
+        "might": "0"
+        "money": "1"
+        "magic": "3"
+        "effect": "Announce: Copy the effect of a face-up unit."
+    },
+    {
+        "id": "Unit19",
+        "name": "Alomancer",
+        "type": "Unit",
+        "cost": "4"
+        "might": "0"
+        "money": "1"
+        "magic": "3"
+        "effect": "Every card with "Mage" or "Mancer" in its name that is not on this tile gets +1 Magic.  This tile is worth +1 Influence."
+    },
+    {
+        "id": "Unit20",
+        "name": "Battlemage",
+        "type": "Unit",
+        "cost": "4"
+        "might": "3"
+        "money": "0"
+        "magic": "3"
+        "effect": "If this tile can be won with Might, +1 Magic.  If this tile can be won with Magic, +1 Might."
+    },
+    {
+        "id": "Unit21",
+        "name": "Pikeman",
+        "type": "Unit",
+        "cost": "4"
+        "might": "3"
+        "money": "1"
+        "magic": "0"
+        "effect": "If a unit moves (not deploys) to this tile, you may reveal Pikeman to discard that unit."
+    },
+    {
+        "id": "Unit22",
+        "name": "Conquistador",
+        "type": "Unit",
+        "cost": "5"
+        "might": "2"
+        "money": "1"
+        "magic": "3"
+        "effect": "Mounted"
+    },
+    {
+        "id": "Unit23",
+        "name": "Golem",
+        "type": "Unit",
+        "cost": "5"
+        "might": "5"
+        "money": "2"
+        "magic": "5"
+        "effect": "If no friendly units on this tile have 3 or more Magic, this unit's stats are 0/0/0."
+    },
+    {
+        "id": "Unit24",
+        "name": "Knight",
+        "type": "Unit",
+        "cost": "5"
+        "might": "4"
+        "money": "2"
+        "magic": "0"
+        "effect": "Mounted"
+    },
+    {
+        "id": "Unit25",
+        "name": "Trader",
+        "type": "Unit",
+        "cost": "6"
+        "might": "0"
+        "money": "1"
+        "magic": "0"
+        "effect": "For every +1 Money on this tile, +1 Money"
+    },
+    {
+
+    }
+  ]
+}

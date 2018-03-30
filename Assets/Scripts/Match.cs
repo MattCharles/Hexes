@@ -100,7 +100,7 @@ public class Match {
         {
             foreach(Player winner in tile.FindWinners())
             {
-                winner.Influence += tile.Influence;
+                winner.Influence += tile.BaseInfluence;
             }
             //TODO: check for a winner? Or else the quest thing idk
             tileField.Remove(tile);

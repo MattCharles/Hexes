@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tile { 
 
-    public int Influence { get; set; }
+    public int BaseInfluence { get; set; }
     public string Name { get; set; }
     public List<Tile> Neighbors { get; set; }
     public Vector3 Position { get; set; }
@@ -63,7 +63,7 @@ public class Tile {
         id = (string)data["id"];
         Name = (string)data["name"];
         //text = (string)data["text"];
-        Influence = System.Convert.ToInt32(data["influence"]);
+        BaseInfluence = System.Convert.ToInt32(data["influence"]);
         Resource = _mappings[(string)data["domain"]];
     }
 }
