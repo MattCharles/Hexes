@@ -75,7 +75,7 @@ def main():
         print("No data found.")
     else:
         tileList.write("{")
-        tileList.write("\n    \"tiles\": [{ ")
+        tileList.write("\n    \"tiles\": [{ \n")
         for row in values:
             print("Name, Influence, Methods")
             # Print columns A and E, which correspond to indices 0 and 4.

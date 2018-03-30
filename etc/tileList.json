@@ -1,5 +1,6 @@
 {
-    "tiles": [{         "id": "Tile0",
+    "tiles": [{ 
+        "id": "Tile0",
         "name": "Wasteland",
         "influence": "0",
         "domain": "Any"

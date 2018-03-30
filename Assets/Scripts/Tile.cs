@@ -18,7 +18,8 @@ public class Tile {
         {"Magic", Resource.Magic },
         {"Magic OR Money", Resource.notMight },
         {"Magic OR Might", Resource.notMoney },
-        {"Might OR Money", Resource.notMagic }
+        {"Might OR Money", Resource.notMagic },
+        {"Any", Resource.All }
     };
     
     public Dictionary<Player, Corps> occupants;
