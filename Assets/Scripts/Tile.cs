@@ -8,9 +8,18 @@ public class Tile {
     public string Name { get; set; }
     public List<Tile> Neighbors { get; set; }
     public Vector3 Position { get; set; }
-    public Resource Resource { get; }
+    public Resource Resource { get; private set; }
     public string id;
     public string text;
+    static Dictionary<string, Resource> _mappings = new Dictionary<string, Resource>
+    {
+        {"Might", Resource.Might },
+        {"Money", Resource.Money },
+        {"Magic", Resource.Magic },
+        {"Magic OR Money", Resource.notMight },
+        {"Magic OR Might", Resource.notMoney },
+        {"Might OR Money", Resource.notMagic }
+    };
     
     public Dictionary<Player, Corps> occupants;
 
@@ -47,11 +56,13 @@ public class Tile {
         unit.AddToDiscard();
     }
 
+    //TODO: DeckFactory
     public virtual void Load(Dictionary<string, object> data)
     {
         id = (string)data["id"];
         Name = (string)data["name"];
-        text = (string)data["text"];
+        //text = (string)data["text"];
         Influence = System.Convert.ToInt32(data["influence"]);
+        Resource = _mappings[(string)data["domain"]];
     }
 }
