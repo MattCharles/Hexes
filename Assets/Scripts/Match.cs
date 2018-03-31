@@ -8,6 +8,7 @@ public class Match {
     public Pile<Tile> tileDeck;
     public Pile<Tile> tileDiscard;
     public List<Tile> tileField;
+    public List<Card> trash;
 
     public Player CurrentPlayer
     {

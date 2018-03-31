@@ -11,6 +11,7 @@ public class Unit : Card {
     public int bonusMight = 0;
     public int bonusMoney = 0;
     public int bonusMagic = 0;
+    public int bonusInfluence = 0;
     public List<Tribe> tribes;
     public int Might
     {

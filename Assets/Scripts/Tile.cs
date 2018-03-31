@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile { 
+public class Tile {
 
     public int BaseInfluence { get; set; }
     public string Name { get; set; }
     public List<Tile> Neighbors { get; set; }
     public Vector3 Position { get; set; }
     public Resource Resource { get; private set; }
+    public int BonusInfluence { get; set; }
+    public int BaseResist { get; set; }
+    public int BonusResist { get; set; }
+    public bool IsPlayable { get; set; } = true;
     public string id;
     public string text;
     static Dictionary<string, Resource> _mappings = new Dictionary<string, Resource>
@@ -31,14 +35,14 @@ public class Tile {
         List<Player> winners = null;
         foreach(Corps corps in occupants.Values)
         {
-            if (corps.getTotal(Resource) > currentMax)
+            if (corps.getTotal(Resource) > currentMax + BaseResist)
             {
                 winners.Clear();
                 winners.Add(corps.owner);
                 currentMax = corps.getTotal(Resource);
             }
             //TODO: handle ties - for now, both win in a tie
-            else if(corps.getTotal(Resource) == currentMax)
+            else if(corps.getTotal(Resource) == currentMax + BaseResist)
             {
                 winners.Add(corps.owner);
             }
